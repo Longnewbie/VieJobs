@@ -4,6 +4,25 @@ VieJobs là một ứng dụng web toàn diện dành cho tuyển dụng và tì
 
 ---
 
+## ✨ Tính năng Nổi bật (Key Features)
+
+### Dành cho Ứng viên (Candidates)
+- **Tìm kiếm & Lọc việc làm:** Tìm kiếm việc làm dễ dàng theo từ khóa, vị trí, ngành nghề và mức lương.
+- **Quản lý Hồ sơ & CV:** Tạo CV trực tiếp trên nền tảng hoặc tải lên CV cá nhân.
+- **Theo dõi Ứng tuyển:** Nộp đơn ứng tuyển và theo dõi trạng thái hồ sơ (Chờ duyệt, Được gọi phỏng vấn, Từ chối).
+- **Gợi ý Việc làm:** Được đề xuất các công việc phù hợp dựa trên kỹ năng và hồ sơ cá nhân.
+
+### Dành cho Nhà tuyển dụng (Recruiters)
+- **Quản lý Tin tuyển dụng:** Tạo, chỉnh sửa, đóng/mở các tin tuyển dụng một cách nhanh chóng.
+- **Quản lý Ứng viên:** Xem danh sách ứng viên nộp đơn, phân loại và thay đổi trạng thái tuyển dụng.
+- **AI Phân tích & Đánh giá CV:** Sử dụng công nghệ OCR và LLM (OpenAI/Google GenAI) để tự động trích xuất thông tin từ CV (PDF), phân tích và chấm điểm mức độ phù hợp của ứng viên với yêu cầu công việc.
+
+### Dành cho Quản trị viên (Admins)
+- **Bảng điều khiển (Dashboard):** Xem các biểu đồ và thống kê trực quan về hoạt động của hệ thống (lượt ứng tuyển, số lượng tin đăng,...).
+- **Quản lý Người dùng & Công ty:** Quản lý tài khoản, xét duyệt tư cách nhà tuyển dụng và kiểm duyệt nội dung tin đăng.
+
+---
+
 ## 🏗 Kiến trúc Hệ Thống (Architecture)
 
 VieJobs sử dụng kiến trúc **Client-Server**, vận hành thông qua các API RESTful:
