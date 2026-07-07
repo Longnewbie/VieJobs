@@ -15,19 +15,19 @@ const JobMarketDashboard = () => {
         .filter((job) => job.status === "active" && job.approval === "approved")
         .sort(
           (a, b) =>
-            new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()
+            new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime(),
         )
         .slice(0, 3),
-    [allJobs]
+    [allJobs],
   );
 
   // Tổng số việc làm active & approved
   const activeJobsCount = useMemo(
     () =>
       allJobs.filter(
-        (job) => job.status === "active" && job.approval === "approved"
+        (job) => job.status === "active" && job.approval === "approved",
       ).length,
-    [allJobs]
+    [allJobs],
   );
 
   // Việc làm đăng mới trong 24h gần nhất
@@ -44,7 +44,7 @@ const JobMarketDashboard = () => {
     const set = new Set();
     allJobs.forEach((job) => {
       if (job.status === "active" && job.approval === "approved") {
-        set.add(job.company._id || job.company._id);
+        set.add(job.company?._id || job.company?._id);
       }
     });
     return set.size;
@@ -203,14 +203,14 @@ const JobMarketDashboard = () => {
                         <div className="flex items-start space-x-4">
                           <div className="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg">
                             <span className="text-white font-bold text-sm">
-                              {job.company.logo ? (
+                              {job?.company?.logo ? (
                                 <img
-                                  src={job.company.logo}
+                                  src={job?.company?.logo}
                                   alt={job.company.name}
                                   className="size-12"
                                 />
                               ) : (
-                                job.company.name.charAt(0).toUpperCase()
+                                job?.company?.name.charAt(0).toUpperCase()
                               )}
                             </span>
                           </div>
@@ -219,10 +219,10 @@ const JobMarketDashboard = () => {
                               {job.title}
                             </h4>
                             <p className="text-xs text-green-300 mb-1 truncate">
-                              {job.company.name}
+                              {job?.company?.name}
                             </p>
                             <p className="text-xs text-slate-400 truncate">
-                              {job.location}
+                              {job?.location}
                             </p>
                           </div>
                         </div>

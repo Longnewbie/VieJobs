@@ -54,10 +54,10 @@ const LatestJobCards = ({ job }: LatestJobCardsProps) => {
         <div className="relative z-10 mb-5">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
-              {job?.company.logo && (
+              {job?.company?.logo && (
                 <div className="relative">
                   <img
-                    src={job.company.logo || "/placeholder.svg"}
+                    src={job?.company?.logo || "/placeholder.svg"}
                     alt={`${job.company.name} logo`}
                     className="h-10 w-10 object-contain rounded-sm shadow-sm group-hover:scale-110 transition-transform duration-300"
                   />
@@ -65,12 +65,12 @@ const LatestJobCards = ({ job }: LatestJobCardsProps) => {
                 </div>
               )}
               <h3 className="text-lg font-bold text-gray-900 group-hover:text-blue-600 transition-colors duration-300">
-                {job?.company.name}
+                {job?.company?.name}
               </h3>
             </div>
             <div className="flex items-center gap-1 bg-gradient-to-r from-gray-100 to-blue-100 text-gray-700 px-3 py-1.5 rounded-full text-xs font-medium border border-gray-200">
               <MapPin className="w-3 h-3" />
-              <span>{job?.company.location}</span>
+              <span>{job?.company?.location}</span>
             </div>
           </div>
         </div>
@@ -123,15 +123,15 @@ const LatestJobCards = ({ job }: LatestJobCardsProps) => {
             {/* Panel Header */}
             <div className="p-4 bg-gradient-to-r from-gray-50 to-blue-50 border-b border-gray-200/60">
               <div className="flex items-center gap-2 mb-2">
-                {job?.company.logo && (
+                {job?.company?.logo && (
                   <img
-                    src={job.company.logo || "/placeholder.svg"}
-                    alt={`${job.company.name} logo`}
+                    src={job?.company?.logo || "/placeholder.svg"}
+                    alt={`${job?.company?.name} logo`}
                     className="h-8 w-8 object-contain rounded-lg shadow-sm"
                   />
                 )}
                 <h3 className="text-base font-bold text-gray-900">
-                  {job?.company.name}
+                  {job?.company?.name}
                 </h3>
               </div>
               <h4 className="text-lg font-semibold text-blue-600 mb-1">
@@ -139,7 +139,7 @@ const LatestJobCards = ({ job }: LatestJobCardsProps) => {
               </h4>
               <div className="flex items-center text-sm text-gray-500 gap-1">
                 <MapPin size={14} className="text-gray-400" />
-                <span>{job?.company.location}</span>
+                <span>{job?.company?.location}</span>
               </div>
             </div>
 
