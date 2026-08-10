@@ -90,7 +90,7 @@ export const resumeReview = async (req, res, next) => {
     // 2. Gửi text lên Gemini API (Google Generative Language API)
     try {
       const geminiApiKey = process.env.GEMINI_API_KEY_REVIEW_CV;
-      const geminiApiUrl = `https://generativelanguage.googleapis.com/v1/models/gemini-2.5-flash:generateContent?key=${geminiApiKey}`;
+      const geminiApiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent?key=${geminiApiKey}`;
       const prompt = `
                       Bạn là chuyên gia tuyển dụng và cố vấn nghề nghiệp.
                       - Viết bằng tiếng Việt tự nhiên, thân thiện và chuyên nghiệp, không dùng ký hiệu "*" hay "•".
